@@ -64,16 +64,6 @@ button {
   font-weight: 600;
 }
 
-.hide {
-  display: none;
-  visibility: hidden;
-}
-
-.show {
-  display: block;
-  visibility: visible;
-}
-
 .header-image {
   margin-top: 1.5rem;
 }
@@ -103,6 +93,10 @@ button {
 
 .ticket-holder {
   margin-top: 1.5rem;
+}
+
+.ticket-section {
+  display: none;
 }
 
 /* CSS for Tablet size devices */
