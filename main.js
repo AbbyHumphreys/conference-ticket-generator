@@ -67,6 +67,7 @@ function handleGenerateTicket(event) {
 
     document.querySelector(".ticket-section h1").textContent = `Congrats, ${name}! Your ticket is ready.`;
     document.querySelector(".ticket-section p").innerHTML = `We've emailed your ticket to ${emailAddress} and will send updates in the run up to the event.`
+    document.querySelector(".ticket-holder-name").textContent = `${name}`
     githubHandle.textContent = `@${github}`;
     ticketNumber.textContent = randomTicketNumber;
 

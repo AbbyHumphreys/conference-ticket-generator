@@ -42,6 +42,11 @@ h1 {
   font-weight: 800;
 }
 
+h2 {
+  font-weight: 600;
+  margin: 0;
+}
+
 label {
   font-weight: 600;
 }
@@ -78,25 +83,84 @@ button {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 1.5rem;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-.ticket {
-  border: 1px solid var(--purplelight);
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 1.5rem;
+.ticker-wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-.ticket-holder {
-  margin-top: 1.5rem;
+.ticket {
+  position: relative;
+  border: 1px solid var(--purplelight);
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.2rem;
+  display: flex;
+}
+
+.ticket::before,
+.ticket::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: var(--purpledark);
+  border-radius: 50%;
+  top: -5%;
+  transform: translateX(800%);
+}
+
+.ticket::before {
+  top: 160px;
+}
+
+.ticket::after {
+  bottom: 10px;
+}
+
+img.ticket-holder {
+  border-radius: 50%;
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: cover;
 }
 
 .ticket-section {
   display: none;
+}
+
+.ticket-holder-container {
+  display: flex;
+}
+
+.ticket-number-container {
+  width: 25%;
+  writing-mode: vertical-rl;
+  text-align: center;
+  margin-left: auto;
+  padding-right: 1rem;
+}
+
+.ticket-number {
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--offwhite);
+}
+
+.github-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.github-icon {
+  margin-right: 0.5rem;
 }
 
 /* CSS for Tablet size devices */
